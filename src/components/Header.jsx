@@ -29,13 +29,6 @@ const Header = ({ onSearchChange, onSearchSubmit }) => {
         >
           Szukaj
         </button>
-
-        {/* fakebutton do usunięcia */}
-        {/* <button
-          className='bg-white p-2 rounded-md w-20 uppercase text-slate-600'
-        >
-          Szukaj
-        </button> */}
       </div>
     </section>
   );
