@@ -160,10 +160,11 @@ function App() {
             </div>
           ))
         ) : (
-          <div className='w-full h-screen flex flex-col items-center justify-center text-2xl'>
-            <p className='card-title italic shadow-xl px-6 py-2 rounded-xl bg-slate-100 text-blue-950'>
-              jeszcze nie wybrałeś miasta
-            </p>
+          <div className='w-full h-screen flex flex-col items-center'>
+            <div className='flex flex-col items-center justify-center relative opacity-60'>
+              <img src="assets/6322.png" className='w-1/3' alt="img" />
+              <p className='absolute text-xl'>Wybierz miasto</p>
+            </div>
           </div>
         )}
       </section>
