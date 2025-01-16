@@ -16,6 +16,7 @@ function App() {
     setSearch(value);
   };
 
+  // FUNKCJA WYSZUKIWANIA MIASTA
   const searchPressed = () => {
     if (!search) {
       alert("Proszę wpisać nazwę miasta!");
@@ -41,6 +42,7 @@ function App() {
       });
   };
   
+  // USUWANIE MIASTA Z STRONY GŁÓWNEJ
   const deleteCity = (index) => {
     setCities((prevCities) => {
       const updatedCities = prevCities.filter((_, i) => i !== index);
@@ -49,7 +51,7 @@ function App() {
     });
   };
   
-
+  // FUNKCJA WSKAZUJĄCA KIERUNEK WIATRU
   function getWindDirection(degrees) {
     const directions = [
       'Północ',
@@ -66,6 +68,7 @@ function App() {
     return directions[index % 8];
   }
 
+  // ZAPIS W LOCAL STORAGE
   useEffect(() => {
     if (cities.length > 0) {
       const weatherData = { cities };
@@ -81,6 +84,7 @@ function App() {
     }
   }, []);
 
+  // KOD APLIKACJI
   return (
     <section id='weather-app'>
       {/* header */}
@@ -150,7 +154,7 @@ function App() {
                 </p>
               </div>
 
-              {/* Button to remove city */}
+              {/* Button REMOVE */}
               <button
                 className='mt-4 px-6 py-2 bg-red-500 text-white rounded-xl'
                 onClick={() => deleteCity(index)}
